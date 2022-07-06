@@ -8,8 +8,8 @@ import CreateArea from "./components/CreateArea";
 function App() {
   const [noteItems, setNoteItems] = useState([
     {
-      title: "Note 1",
-      content: "Note 1 content"
+      title: "Note Title",
+      content: "Contents of the note."
     }
   ]);
 
