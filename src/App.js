@@ -33,19 +33,21 @@ function App() {
   return (
     <div>
       <Header />
-      <CreateArea onAddClick={addItem} />
-      {noteItems.map((item, index) => {
-        const { title, content } = item;
-        return (
-          <Note
-            key={index}
-            title={title}
-            content={content}
-            ids={index}
-            onDeleteClick={deleteItem}
-          />
-        );
-      })}
+      <CreateArea addOnClick={addItem} />
+      <div className='container'>
+        {noteItems.map((item, index) => {
+          const { title, content } = item;
+          return (
+            <Note
+              key={index}
+              title={title}
+              content={content}
+              id={index}
+              deleteOnClick={deleteItem}
+            />
+          );
+        })}
+      </div>
       <Footer />
     </div>
   );

@@ -19,6 +19,7 @@ header {
 header h1 {
   color: #fff;
   padding: 0 20px;
+  font-family: 'Archivo Narrow', sans-serif;
 }
 
 form {
@@ -27,7 +28,7 @@ form {
   margin: 30px 20px;
   border-radius: 8px;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgb( 0 0 0 / .6);
+  box-shadow: 0 2px 8px rgb( 0 0 0 / .4);
 }
 
 form :is(input, textarea) {
@@ -55,17 +56,20 @@ form button {
 
 .container {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  gap: 1rem;
+  height: max-content;
   padding: 20px;
 }
 
 .notes {
-  width: 200px;
+  max-width: 400px;
+  min-width: 300px;
   background-color: #fff;
   border-radius: 8px;
   padding: 10px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 8px rgb( 0 0 0 / .3);
+  display: inline-block;
 }
 
 .notes .title {
@@ -76,13 +80,18 @@ form button {
 }
 
 .notes .title button {
-  background-color: rgb(58, 57, 57);
+  background-color: transparent;
   border: none;
   outline: none;
   padding: 2px 4px;
   border-radius: 4px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
+  transition: color .4s;
+}
+
+.notes .title button:hover {
+  color: rgb(220, 30, 20);
 }
 
 footer {
@@ -91,5 +100,7 @@ footer {
   text-align: center;
   bottom: 0;
   left: 0;
-  color: blueviolet;
+  color: #fff;
+  padding: 1rem 0;
+  background-color: #6e85b7;
 }
