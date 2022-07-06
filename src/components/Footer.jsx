@@ -2,7 +2,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <footer>
+        <h5>@ Copyright</h5>
+    </footer>
   )
 }
 

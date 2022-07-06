@@ -1,8 +1,17 @@
 import React from 'react'
 
-function Note() {
+function Note({ title, content }) {
   return (
-    <div>Note</div>
+    <div className='container'>
+        <div className='notes'>
+            <div className="title">
+                <h3>{title}</h3>
+                <button>X</button>
+            </div>
+        
+            <p>{content}</p>
+        </div>
+    </div>
   )
 }
 
