@@ -1,16 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Zoom } from '@mui/material';
 
 function Note({ title, content, deleteOnClick, id }) {
-  return (
+const [expand, setExpand] = useState(true);
 
-    <div className='notes'>
-        <div className="title">
-            <h3>{title}</h3>
-            <button onClick={() => deleteOnClick(id)}>X</button>
-        </div>
-    
-        <p>{content}</p>
-    </div>
+  const expanded = () => {
+    setExpand(false);
+  }
+
+  return (
+    <Zoom  in={expand}>
+      <div className='notes'>
+          <div className="title">
+              <h3>{title}</h3>
+              <button onClick={() => {
+                expanded
+                deleteOnClick(id);
+              }}>X</button>
+          </div>
+      
+          <p>{content}</p>
+      </div>
+    </Zoom>
   )
 }
 

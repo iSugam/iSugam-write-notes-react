@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Fab } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 
 function CreateArea({ addOnClick }) {
     const [notes, setNotes] = useState({
@@ -12,7 +14,7 @@ function CreateArea({ addOnClick }) {
     }
   return (
     <div>
-        <form>
+        <form className='form'>
             <input 
                 onChange={handleChange} 
                 type="text" name= "title" 
@@ -26,7 +28,7 @@ function CreateArea({ addOnClick }) {
                 value={notes.content}>
             </textarea>
 
-            <button onClick={(e) => {
+            <Fab color="info" onClick={(e) => {
                 e.preventDefault()
                 addOnClick(notes)
                 setNotes({
@@ -34,8 +36,8 @@ function CreateArea({ addOnClick }) {
                     content:''
                 })
                 }}>
-                ADD ITEM
-            </button>
+                <AddIcon />
+            </Fab>
         </form>
     </div>
   )
