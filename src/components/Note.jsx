@@ -9,7 +9,7 @@ const [expand, setExpand] = useState(true);
   }
 
   return (
-    <Zoom  in={expand}>
+    <Zoom  in={expand} timeout={500}>
       <div className='notes'>
           <div className="title">
               <h3>{title}</h3>
