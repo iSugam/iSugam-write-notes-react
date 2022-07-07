@@ -23,13 +23,7 @@ function App() {
 
   const addItem = (notes) => {
     if(notes.title === "" || notes.content === "") return
-    setNoteItems([
-      ...noteItems,
-      {
-        title: notes.title,
-        content: notes.content
-      }
-    ]);
+    setNoteItems([...noteItems, notes]);
   };
 
   const deleteItem = (id) => {
