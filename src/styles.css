@@ -31,7 +31,7 @@ form {
   box-shadow: 0 2px 8px rgb( 0 0 0 / .4);
 }
 
-form :is(input, textarea) {
+form.form :is(input, textarea) {
   width: 100%;
   outline: none;
   border: none;
@@ -41,16 +41,16 @@ form :is(input, textarea) {
   resize: none;
 }
 
-form button {
+form.form button {
   position: absolute;
-  background-color: #6e85b7;
+  background-color: #6e85b7 ; 
   border: none;
   outline: none;
   color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
+  padding: 2px;
+  border-radius: 50%;
   left: 19px;
-  bottom: -10px;
+  bottom: -25px;
   cursor: pointer;
 }
 
@@ -99,8 +99,8 @@ form button {
   cursor: pointer;
   transition: color .4s;
   font-weight: 800;
-
-font-size: 16px;}
+  font-size: 16px;
+}
 
 .notes .title button:hover {
   color: rgb(220, 30, 20);
