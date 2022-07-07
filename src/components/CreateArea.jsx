@@ -8,7 +8,7 @@ function CreateArea({ addOnClick }) {
 
     const handleChange = (e) => {
         const {value, name} = e.target
-        setNotes(currentValue =>({...notes, [name]: value}))
+        setNotes(currentValue =>({...currentValue, [name]: value}))
     }
   return (
     <div>
