@@ -22,6 +22,7 @@ function App() {
   ]);
 
   const addItem = (notes) => {
+    if(notes.title === "" || notes.content === "") return
     setNoteItems([
       ...noteItems,
       {
