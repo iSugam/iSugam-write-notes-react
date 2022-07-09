@@ -87,6 +87,7 @@ form.form button {
 }
 .notes p {
   font-size: 13px;
+  width: 90%;
 }
 
 .notes .title button {
