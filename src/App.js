@@ -6,6 +6,8 @@ import Note from "./components/Note";
 import CreateArea from "./components/CreateArea";
 
 function App() {
+
+  // State for saving the data in an array
   const [noteItems, setNoteItems] = useState([
     {
       title: "Note Title One",
@@ -21,11 +23,13 @@ function App() {
     }
   ]);
 
+  // For adding new notes
   const addItem = (notes) => {
     if(notes.title === "" || notes.content === "") return
     setNoteItems([...noteItems, notes]);
   };
 
+  // For deleting existing notes
   const deleteItem = (id) => {
     setNoteItems((prevValue) => {
       return prevValue.filter((item, index) => {
@@ -33,6 +37,7 @@ function App() {
       });
     });
   };
+  
   return (
     <div>
       <Header />
